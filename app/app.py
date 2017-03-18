@@ -55,10 +55,10 @@ def chart():
     if radio_form.validate_on_submit():
         if radio_form.example.data == 'gc':
             return render_template('googlecharts.html', data=data,
-                                   radio_form=radio_form)
+                                   radio_form=radio_form, list_form=list_form)
         elif radio_form.example.data == 'cj':
             return render_template('chartjs.html', data=data,
-                                   radio_form=radio_form)
+                                   radio_form=radio_form, list_form=list_form)
         elif radio_form.example.data == 'hc':
             return render_template('highcharts.html', data=data,
                                    radio_form=radio_form, list_form=list_form)
